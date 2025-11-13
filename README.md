@@ -168,7 +168,7 @@ Kontribusi selalu diterima! Jika Anda ingin menambahkan fitur atau memperbaiki b
 ## 📧 Kontak
 
 Jika ada pertanyaan atau saran, silakan hubungi:
-- Email: chandraq818@gmail.com@example.com
+- Email: chandraq818@gmail.com
 - GitHub: [candra2006](https://github.com/candra2006)
 
 ---
