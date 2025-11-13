@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WeatherNow - Pendeteksi Cuaca Premium</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>⛅ WeatherNow</h1>
+            <p>Informasi Cuaca Real-Time untuk Seluruh Dunia</p>
+        </div>
+
+        <div class="search-container">
+            <div class="search-box">
+                <div class="input-wrapper">
+                    <input type="text" id="cityInput" placeholder="Cari kota atau negara..." />
+                </div>
+                <button class="btn" onclick="getWeather()">Cari Cuaca</button>
+                <button class="btn btn-secondary" onclick="getLocationWeather()">📍 Lokasi Saya</button>
+            </div>
+            <div class="quick-cities">
+                <div class="quick-city" onclick="quickSearch('Jakarta')">Jakarta</div>
+                <div class="quick-city" onclick="quickSearch('Surabaya')">Surabaya</div>
+                <div class="quick-city" onclick="quickSearch('Bandung')">Bandung</div>
+                <div class="quick-city" onclick="quickSearch('Bali')">Bali</div>
+                <div class="quick-city" onclick="quickSearch('Singapore')">Singapore</div>
+                <div class="quick-city" onclick="quickSearch('Tokyo')">Tokyo</div>
+            </div>
+        </div>
+
+        <div class="error" id="error"></div>
+        
+        <div class="loading" id="loading">
+            <div class="spinner"></div>
+            <div class="loading-text">Memuat data cuaca...</div>
+        </div>
+
+        <div class="weather-main" id="weatherMain">
+            <div class="current-weather">
+                <div class="weather-left">
+                    <div class="weather-icon-large" id="weatherIconLarge"></div>
+                    <div class="temperature-large" id="temperatureLarge"></div>
+                    <div class="weather-description" id="weatherDescription"></div>
+                    <div class="location-info">
+                        <span>📍</span>
+                        <span id="locationName"></span>
+                    </div>
+                    <div id="tempBadge"></div>
+                    <div style="margin-top: 15px; color: #999; font-size: 0.9em;" id="lastUpdate"></div>
+                </div>
+
+                <div class="weather-right">
+                    <div class="info-card">
+                        <div class="info-icon">💧</div>
+                        <div class="info-label">Kelembaban</div>
+                        <div class="info-value" id="humidity"></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">💨</div>
+                        <div class="info-label">Kecepatan Angin</div>
+                        <div class="info-value" id="windSpeed"></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">🌡️</div>
+                        <div class="info-label">Terasa Seperti</div>
+                        <div class="info-value" id="feelsLike"></div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-icon">📊</div>
+                        <div class="info-label">Tekanan</div>
+                        <div class="info-value" id="pressure"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <div class="detail-icon">👁️</div>
+                    <div class="detail-label">Jarak Pandang</div>
+                    <div class="detail-value" id="visibility"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">☁️</div>
+                    <div class="detail-label">Awan</div>
+                    <div class="detail-value" id="clouds"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🌬️</div>
+                    <div class="detail-label">Arah Angin</div>
+                    <div class="detail-value" id="windDirection"></div>
+                </div>
+                <div class="detail-card">
+                    <div class="detail-icon">🌍</div>
+                    <div class="detail-label">Koordinat</div>
+                    <div class="detail-value" id="coordinates"></div>
+                </div>
+            </div>
+
+            <div class="sun-times">
+                <div class="sun-card">
+                    <div class="sun-icon">🌅</div>
+                    <div class="sun-label">Matahari Terbit</div>
+                    <div class="sun-time" id="sunrise"></div>
+                </div>
+                <div class="sun-card">
+                    <div class="sun-icon">🌇</div>
+                    <div class="sun-label">Matahari Terbenam</div>
+                    <div class="sun-time" id="sunset"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="forecast-container" id="forecastContainer">
+            <div class="forecast-title">📅 Prakiraan 5 Hari Ke Depan</div>
+            <div class="forecast-grid" id="forecastGrid"></div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Weather Detect Web| All right reserved</p>
+    </footer>
+
+    <script src="script.js" defer></script>
+</body>
+</html>
