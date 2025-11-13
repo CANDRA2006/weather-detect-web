@@ -23,7 +23,7 @@
 
 ### 1. Clone Project
 ```bash
-git clone https://github.com/username/weathernow.git
+git clone https://github.com/candra2006/weather-detect-web.git
 cd weathernow
 ```
 
