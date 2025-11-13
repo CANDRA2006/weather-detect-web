@@ -60,6 +60,7 @@ Aplikasi ini menggunakan **OpenWeatherMap API** untuk mengambil data cuaca. Ikut
 5. **Penting**: API key baru butuh waktu 10 menit - 2 jam untuk aktif
 6. Pada terminal masuk ke folder server dan jalankan perintah
 ```bash
+cd server
 npm start
 ```
 
@@ -109,7 +110,7 @@ https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${AP
 
 ---
 
-## 💡 Tips untuk Pemula
+## 💡 Tips
 
 1. **Pahami Fetch API**: Pelajari cara menggunakan `fetch()` untuk memanggil API
 2. **Async/Await**: Gunakan async/await untuk menangani operasi asynchronous
