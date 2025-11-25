@@ -147,7 +147,7 @@ Dengan proyek ini, kamu akan belajar:
 ### Data tidak muncul
 - Periksa koneksi internet
 - Buka Console browser (F12) untuk melihat error
-- Pastikan API key sudah ditambahkan di `script.js`
+- Pastikan API key sudah ditambahkan
 
 ### Lokasi GPS tidak bekerja
 - Izinkan akses lokasi di browser
