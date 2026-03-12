@@ -9,12 +9,12 @@ app.use(cors());
 
 const API_KEY = process.env.API_KEY;
 
-// ✅ Endpoint uji koneksi
+// Endpoint uji koneksi
 app.get("/api/test", (req, res) => {
   res.send("Server aktif dan siap menerima permintaan.");
 });
 
-// ✅ Endpoint untuk data cuaca sekarang
+// Endpoint untuk data cuaca sekarang
 app.get("/api/weather", async (req, res) => {
   const { city, lat, lon } = req.query;
   let url;
@@ -36,7 +36,7 @@ app.get("/api/weather", async (req, res) => {
   }
 });
 
-// ✅ Endpoint untuk data prakiraan (forecast)
+//  Endpoint untuk data prakiraan (forecast)
 app.get("/api/forecast", async (req, res) => {
   const { city, lat, lon } = req.query;
   let url;
